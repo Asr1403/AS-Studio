@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AS Studio — Modern Web Design & Development Agency</title>
+    <meta name="description"
+        content="AS Studio designs and develops modern, fast and responsive websites for Indian businesses and startups that want to stand out online.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        charcoal: '#0a0a0c',
+                        surface: '#121216',
+                        surfaceBorder: '#27272a',
+                        accent: '#2563eb', /* Electric Blue */
+                        accentHover: '#1d4ed8',
+                        muted: '#a1a1aa'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            background-color: #0a0a0c;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0a0a0c;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #27272a;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3f3f46;
+        }
+    </style>
+</head>
+
+<body class="bg-charcoal text-white antialiased selection:bg-blue-600 selection:text-white">
+
+    <header
+        class="fixed top-0 left-0 right-0 z-50 bg-charcoal/85 backdrop-blur-md border-b border-white/10 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="text-xl font-bold tracking-tight text-white flex items-center gap-2">
+                <span class="w-3 h-3 bg-blue-600 rounded-sm"></span>
+                AS Studio
+            </a>
+
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-400">
+                <a href="#home" class="text-white hover:text-white transition-colors">Home</a>
+                <a href="#services" class="hover:text-white transition-colors">Services</a>
+                <a href="#pricing" class="hover:text-white transition-colors">Pricing</a>
+                <a href="#work" class="hover:text-white transition-colors">Work</a>
+                <a href="#process" class="hover:text-white transition-colors">Process</a>
+                <a href="#about" class="hover:text-white transition-colors">About</a>
+                <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+            </nav>
+
+            <div class="hidden md:flex items-center gap-4">
+                <a href="https://wa.me/917011885686" target="_blank" rel="noopener noreferrer"
+                    class="text-xs font-medium text-emerald-400 hover:text-emerald-300 flex items-center gap-1.5 bg-emerald-600/10 border border-emerald-500/20 px-3.5 py-2 rounded-lg transition-colors">
+                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                        <path
+                            d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+                    </svg>
+                    WhatsApp Us
+                </a>
+                <a href="#contact"
+                    class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-lg text-sm font-medium transition-all shadow-lg shadow-blue-600/20">
+                    Start a Project
+                </a>
+            </div>
+
+            <button id="menu-btn" aria-label="Toggle Menu"
+                class="md:hidden text-zinc-400 hover:text-white focus:outline-none">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu"
+            class="hidden md:hidden absolute top-20 left-0 w-full bg-surface border-b border-surfaceBorder px-6 py-6 flex flex-col gap-4 shadow-2xl">
+            <a href="#home" class="mobile-link text-zinc-300 hover:text-white py-2 text-base font-medium">Home</a>
+            <a href="#services"
+                class="mobile-link text-zinc-300 hover:text-white py-2 text-base font-medium">Services</a>
+            <a href="#pricing" class="mobile-link text-zinc-300 hover:text-white py-2 text-base font-medium">Pricing &
+                Packages</a>
+            <a href="#work" class="mobile-link text-zinc-300 hover:text-white py-2 text-base font-medium">Work</a>
+            <a href="#process" class="mobile-link text-zinc-300 hover:text-white py-2 text-base font-medium">Process</a>
+            <a href="#about" class="mobile-link text-zinc-300 hover:text-white py-2 text-base font-medium">About</a>
+            <a href="#contact" class="mobile-link text-zinc-300 hover:text-white py-2 text-base font-medium">Contact</a>
+            <div class="pt-4 border-t border-surfaceBorder flex flex-col gap-3">
+                <a href="https://wa.me/917011885686" target="_blank" rel="noopener noreferrer"
+                    class="flex justify-center items-center gap-2 bg-emerald-600/10 border border-emerald-500/20 text-emerald-400 py-3 rounded-lg text-sm font-medium">
+                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                        <path
+                            d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+                    </svg> WhatsApp Us
+                </a>
+                <a href="#contact"
+                    class="mobile-link block text-center bg-blue-600 text-white py-3 rounded-lg text-sm font-medium shadow-md">
+                    Start a Project
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="relative pt-32 pb-20 md:pt-44 md:pb-32 px-6 overflow-hidden border-b border-white/5">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+            <div class="lg:col-span-7 flex flex-col items-start text-left">
+                <div
+                    class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-zinc-300 mb-6 font-medium">
+                    <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+                    Custom Web Solutions for Indian Businesses • GST Invoice Available
+                </div>
+
+                <h1 class="text-4xl sm:text-6xl font-bold tracking-tight text-white leading-[1.1] mb-6">
+                    WE BUILD DIGITAL EXPERIENCES THAT GROW BUSINESSES.
+                </h1>
+
+                <p class="text-lg sm:text-xl text-zinc-400 mb-8 max-w-2xl font-normal leading-relaxed">
+                    AS Studio designs and develops modern, fast and responsive websites for Indian companies,
+                    restaurants, fitness centres, and startups that want to stand out online.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mb-10">
+                    <a href="#pricing"
+                        class="inline-flex justify-center items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-7 py-3.5 rounded-xl font-medium transition-all shadow-lg shadow-blue-600/20">
+                        View Pricing in INR
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                    <a href="#contact"
+                        class="inline-flex justify-center items-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 text-white px-7 py-3.5 rounded-xl font-medium transition-all">
+                        Get a Custom Quote
+                    </a>
+                </div>
+
+                <div
+                    class="pt-6 border-t border-white/10 text-xs tracking-wider text-zinc-400 uppercase font-medium flex flex-wrap items-center gap-3">
+                    <span>Web Design</span>
+                    <span class="w-1 h-1 rounded-full bg-zinc-600"></span>
+                    <span>Development</span>
+                    <span class="w-1 h-1 rounded-full bg-zinc-600"></span>
+                    <span>Deployment</span>
+                </div>
+            </div>
+
+            <div class="lg:col-span-5 relative">
+                <div
+                    class="relative w-full aspect-square max-w-md mx-auto rounded-2xl bg-surface border border-surfaceBorder p-6 flex flex-col justify-between shadow-2xl overflow-hidden">
+                    <div
+                        class="absolute inset-0 bg-[radial-gradient(#27272a_1px,transparent_1px)] [background-size:16px_16px] opacity-30 pointer-events-none">
+                    </div>
+
+                    <div class="relative z-10 flex items-center justify-between border-b border-surfaceBorder pb-4">
+                        <div class="flex items-center gap-2">
+                            <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
+                            <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+                            <div class="w-3 h-3 rounded-full bg-green-500/80"></div>
+                        </div>
+                        <div
+                            class="bg-charcoal px-3 py-1 rounded text-xs text-zinc-400 border border-surfaceBorder font-mono">
+                            as-studio.in
+                        </div>
+                    </div>
+
+                    <div class="relative z-10 my-auto py-6 font-mono text-xs text-zinc-400 space-y-2">
+                        <div class="flex items-center gap-2 text-blue-400">
+                            <span>&gt;</span>
+                            <span class="text-white">Pricing Model: Transparent INR</span>
+                        </div>
+                        <div class="pl-4 text-zinc-400">
+                            starting from: <span class="text-green-400">₹14,999</span><br>
+                            negotiable: <span class="text-blue-400">Yes (Based on Needs)</span><br>
+                            support: <span class="text-purple-400">Dedicated</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-blue-400 pt-2">
+                            <span>&gt;</span>
+                            <span class="text-white animate-pulse">Ready for Indian market_</span>
+                        </div>
+                    </div>
+
+                    <div
+                        class="relative z-10 bg-charcoal/90 border border-surfaceBorder p-4 rounded-xl flex items-center gap-4">
+                        <div
+                            class="w-10 h-10 rounded-lg bg-blue-600/10 border border-blue-500/20 flex items-center justify-center text-blue-400">
+                            <i data-lucide="indian-rupee" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <div class="text-sm font-semibold text-white">Affordable & Flexible</div>
+                            <div class="text-xs text-zinc-400">Tailored packages for every business size</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="services" class="py-24 px-6 bg-charcoal">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-xs uppercase tracking-widest text-blue-500 font-semibold mb-3">Our Expertise</h2>
+                <h3 class="text-3xl sm:text-4xl font-bold tracking-tight text-white">
+                    Everything You Need to Build Your Online Presence
+                </h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div
+                    class="bg-surface border border-surfaceBorder p-8 rounded-2xl hover:border-zinc-700 transition-all group">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-blue-600/10 border border-blue-500/20 flex items-center justify-center text-blue-400 mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="layout" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold text-white mb-3">Website Design</h4>
+                    <p class="text-zinc-400 text-sm leading-relaxed">
+                        Modern UI/UX and responsive website design tailored precisely to your business identity and
+                        local Indian audience.
+                    </p>
+                </div>
+
+                <div
+                    class="bg-surface border border-surfaceBorder p-8 rounded-2xl hover:border-zinc-700 transition-all group">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-blue-600/10 border border-blue-500/20 flex items-center justify-center text-blue-400 mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="code" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold text-white mb-3">Website Development</h4>
+                    <p class="text-zinc-400 text-sm leading-relaxed">
+                        Fast, scalable and responsive websites built with modern technologies ensuring secure and
+                        flawless execution.
+                    </p>
+                </div>
+
+                <div
+                    class="bg-surface border border-surfaceBorder p-8 rounded-2xl hover:border-zinc-700 transition-all group">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-blue-600/10 border border-blue-500/20 flex items-center justify-center text-blue-400 mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="refresh-cw" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold text-white mb-3">Website Redesign</h4>
+                    <p class="text-zinc-400 text-sm leading-relaxed">
+                        Transform outdated websites into modern, conversion-focused and professional digital
+                        experiences.
+                    </p>
+                </div>
+
+                <div
+                    class="bg-surface border border-surfaceBorder p-8 rounded-2xl hover:border-zinc-700 transition-all group">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-blue-600/10 border border-blue-500/20 flex items-center justify-center text-blue-400 mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="store" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold text-white mb-3">Business Websites</h4>
+                    <p class="text-zinc-400 text-sm leading-relaxed">
+                        Professional websites designed specifically for Indian local businesses, cafes, restaurants,
+                        gyms, and service providers.
+                    </p>
+                </div>
+
+                <div
+                    class="bg-surface border border-surfaceBorder p-8 rounded-2xl hover:border-zinc-700 transition-all group">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-blue-600/10 border border-blue-500/20 flex items-center justify-center text-blue-400 mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="shopping-bag" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold text-white mb-3">E-commerce</h4>
+                    <p class="text-zinc-400 text-sm leading-relaxed">
+                        Online stores equipped with product management, shopping carts, UPI/payment gateway readiness,
+                        and secure checkout.
+                    </p>
+                </div>
+
+                <div
+                    class="bg-surface border border-surfaceBorder p-8 rounded-2xl hover:border-zinc-700 transition-all group">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-blue-600/10 border border-blue-500/20 flex items-center justify-center text-blue-400 mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="shield-check" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="text-xl font-semibold text-white mb-3">Website Maintenance</h4>
+                    <p class="text-zinc-400 text-sm leading-relaxed">
+                        Ongoing updates, security improvements, routine backups and dedicated technical support.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="py-24 px-6 bg-surface border-t border-b border-surfaceBorder">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-xs uppercase tracking-widest text-blue-500 font-semibold mb-3">Transparent Investment
+                </h2>
+                <h3 class="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-4">
+                    Website Pricing & Packages in INR
+                </h3>
+                <p class="text-zinc-400 text-sm">
+                    Prices are tailored according to what Indian small businesses, local shops, and startups need. <span
+                        class="text-white font-medium">All packages and charges are negotiable</span> based on your
+                    exact custom requirements and scope.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div
+                    class="bg-charcoal border border-surfaceBorder p-8 rounded-3xl flex flex-col justify-between relative hover:border-zinc-700 transition-all">
+                    <div>
+                        <div
+                            class="inline-block px-3 py-1 rounded bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-medium mb-4">
+                            Starter Landing Page</div>
+                        <h4 class="text-xl font-bold text-white mb-2">Single Page / Portfolio</h4>
+                        <p class="text-xs text-zinc-400 mb-6">Ideal for personal brands, single-service providers, or
+                            simple business intro pages.</p>
+                        <div class="text-3xl font-bold text-white mb-6">₹14,999 <span
+                                class="text-xs text-zinc-500 font-normal">/ starting price</span></div>
+
+                        <ul class="space-y-3 text-sm text-zinc-300 mb-8 border-t border-surfaceBorder pt-6">
+                            <li class="flex items-center gap-2"><i data-lucide="check"
+                                    class="w-4 h-4 text-blue-500"></i> Responsive 1-Page Design</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check"
+                                    class="w-4 h-4 text-blue-500"></i> Mobile & Tablet Optimized</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check"
+                                    class="w-4 h-4 text-blue-500"></i> WhatsApp & Call Button</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check"
+                                    class="w-4 h-4 text-blue-500"></i> Basic SEO Setup</li>
+                            <li class="flex items-center gap-2 text-zinc-500"><i data-lucide="x" class="w-4 h-4"></i>
+                                Advanced E-commerce</li>
+                        </ul>
+                    </div>
+                    <a href="#contact"
+                        class="w-full bg-surface hover:bg-zinc-800 border border-surfaceBorder text-white py-3 rounded-xl font-medium text-center text-sm transition-all">
+                        Inquire / Negotiate
+                    </a>
+                </div>
+
+                <div
+                    class="bg-charcoal border-2 border-blue-600 p-8 rounded-3xl flex flex-col justify-between relative shadow-xl shadow-blue-600/10">
+                    <div
+                        class="absolute -top-3.5 right-8 bg-blue-600 text-white text-[10px] font-semibold tracking-wider uppercase px-3 py-1 rounded-full">
+                        Most Popular for Indian Businesses
+                    </div>
+                    <div>
+                        <div
+                            class="inline-block px-3 py-1 rounded bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-medium mb-4">
+                            Multi-Page Business Website</div>
+                        <h4 class="text-xl font-bold text-white mb-2">Standard Business Site</h4>
+                        <p class="text-xs text-zinc-400 mb-6">Perfect for restaurants, cafes, car mod shops, gyms,
+                            clinics, and local agencies (Up to 5-7 pages).</p>
+                        <div class="text-3xl font-bold text-white mb-6">₹24,999 <span
+                                class="text-xs text-zinc-500 font-normal">/ starting price</span></div>
+
+                        <ul class="space-y-3 text-sm text-zinc-300 mb-8 border-t border-surfaceBorder pt-6">
+                            <li class="flex items-center gap-2"><i data-lucide="check"
+                                    class="w-4 h-4 text-blue-500"></i> Up to 7 Custom Pages</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check"
+                                    class="w-4 h-4 text-blue-500"></i> Premium UI/UX Design</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check"
+                                    class="w-4 h-4 text-blue-500"></i> Inquiry Form & WhatsApp Chat</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check"
+                                    class="w-4 h-4 text-blue-500"></i> Google Maps & Social Integration</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check"
+                                    class="w-4 h-4 text-blue-500"></i> Fast Loading & SEO Friendly</li>
+                        </ul>
+                    </div>
+                    <a href="#contact"
+                        class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-xl font-medium text-center text-sm transition-all shadow-md">
+                        Choose & Discuss Pricing
+                    </a>
+                </div>
+
+                <div
+                    class="bg-charcoal border border-surfaceBorder p-8 rounded-3xl flex flex-col justify-between relative hover:border-zinc-700 transition-all">
+                    <div>
+                        <div
+                            class="inline-block px-3 py-1 rounded bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-medium mb-4">
+                            E-commerce & Advanced</div>
+                        <h4 class="text-xl font-bold text-white mb-2">Online Store / Custom</h4>
+                        <p class="text-xs text-zinc-400 mb-6">For brands selling products online with cart, checkout,
+                            payment gateway, and admin panel.</p>
+                        <div class="text-3xl font-bold text-white mb-6">₹44,999+ <span
+                                class="text-xs text-zinc-500 font-normal">/ starting price</span></div>
+
+                        <ul class="space-y-3 text-sm text-zinc-300 mb-8 border-t border-surfaceBorder pt-6">
+                            <li class="flex items-center gap-2"><i data-lucide="check"
+                                    class="w-4 h-4 text-blue-500"></i> Full E-commerce Functionality</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check"
+                                    class="w-4 h-4 text-blue-500"></i> UPI & Payment Gateway Setup</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check"
+                                    class="w-4 h-4 text-blue-500"></i> Product & Inventory Management</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check"
+                                    class="w-4 h-4 text-blue-500"></i> Secure Admin Dashboard</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check"
+                                    class="w-4 h-4 text-blue-500"></i> Priority Support & Training</li>
+                        </ul>
+                    </div>
+                    <a href="#contact"
+                        class="w-full bg-surface hover:bg-zinc-800 border border-surfaceBorder text-white py-3 rounded-xl font-medium text-center text-sm transition-all">
+                        Request Custom Quote
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-surface border border-surfaceBorder rounded-2xl p-6 text-center max-w-3xl mx-auto">
+                <div class="flex items-center justify-center gap-2 text-blue-400 font-semibold text-sm mb-2">
+                    <i data-lucide="info" class="w-4 h-4"></i>
+                    Flexible & Negotiable According to Your Needs
+                </div>
+                <p class="text-xs text-zinc-400 leading-relaxed">
+                    Every business has different requirements. Whether you are a local restaurant wanting a simple
+                    digital menu website or a startup needing a custom web application, our pricing is fully negotiable
+                    to fit your budget. Contact us directly to discuss what you need.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="work" class="py-24 px-6 bg-charcoal border-b border-surfaceBorder">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+                <div>
+                    <h2 class="text-xs uppercase tracking-widest text-blue-500 font-semibold mb-3">Portfolio & Proof
+                    </h2>
+                    <h3 class="text-3xl sm:text-4xl font-bold tracking-tight text-white">Selected Work</h3>
+                </div>
+                <p class="text-zinc-400 text-sm max-w-md mt-4 md:mt-0">
+                    Real proof of our capability. Here are high-converting web applications we built and deployed for
+                    our clients across industries.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div
+                    class="group bg-surface border border-surfaceBorder rounded-2xl overflow-hidden flex flex-col justify-between hover:border-zinc-700 transition-all">
+                    <div
+                        class="relative w-full aspect-[16/10] overflow-hidden bg-zinc-900 border-b border-surfaceBorder">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80"
+                            alt="Restaurant Website Mockup"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
+                        <div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent">
+                        </div>
+                        <div
+                            class="absolute bottom-4 left-4 bg-charcoal/90 border border-surfaceBorder px-3 py-1.5 rounded-lg text-xs font-mono text-zinc-300 backdrop-blur-sm">
+                            Live Sample: Indian Cafe & Restaurant
+                        </div>
+                    </div>
+
+                    <div class="p-8">
+                        <div class="text-xs font-semibold uppercase tracking-wider text-blue-500 mb-2">Restaurant &
+                            Hospitality</div>
+                        <h4 class="text-2xl font-bold text-white mb-3">Restaurant Website</h4>
+                        <p class="text-zinc-400 text-sm mb-6 leading-relaxed">
+                            A refined online presence featuring mobile table reservations, instant WhatsApp integration,
+                            and an interactive digital menu.
+                        </p>
+                        <a href="#case-study"
+                            class="inline-flex items-center gap-2 text-sm font-medium text-white hover:text-blue-400 transition-colors">
+                            View Case Study <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div
+                    class="group bg-surface border border-surfaceBorder rounded-2xl overflow-hidden flex flex-col justify-between hover:border-zinc-700 transition-all">
+                    <div
+                        class="relative w-full aspect-[16/10] overflow-hidden bg-zinc-900 border-b border-surfaceBorder">
+                        <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1200&q=80"
+                            alt="Car Modification Studio Website"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
+                        <div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent">
+                        </div>
+                        <div
+                            class="absolute bottom-4 left-4 bg-charcoal/90 border border-surfaceBorder px-3 py-1.5 rounded-lg text-xs font-mono text-zinc-300 backdrop-blur-sm">
+                            Live Sample: Automotive Customization Lab
+                        </div>
+                    </div>
+
+                    <div class="p-8">
+                        <div class="text-xs font-semibold uppercase tracking-wider text-blue-500 mb-2">Automotive &
+                            Tuning</div>
+                        <h4 class="text-2xl font-bold text-white mb-3">Car Modification Studio Website</h4>
+                        <p class="text-zinc-400 text-sm mb-6 leading-relaxed">
+                            An aggressive, high-contrast digital portfolio showcasing custom vehicle builds, detailing
+                            services, and custom quote request flows.
+                        </p>
+                        <a href="#contact"
+                            class="inline-flex items-center gap-2 text-sm font-medium text-white hover:text-blue-400 transition-colors">
+                            View Project <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div
+                    class="group bg-surface border border-surfaceBorder rounded-2xl overflow-hidden flex flex-col justify-between hover:border-zinc-700 transition-all">
+                    <div
+                        class="relative w-full aspect-[16/10] overflow-hidden bg-zinc-900 border-b border-surfaceBorder">
+                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=80"
+                            alt="Fitness Gym Website"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
+                        <div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent">
+                        </div>
+                        <div
+                            class="absolute bottom-4 left-4 bg-charcoal/90 border border-surfaceBorder px-3 py-1.5 rounded-lg text-xs font-mono text-zinc-300 backdrop-blur-sm">
+                            Live Sample: Elite Fitness Gym
+                        </div>
+                    </div>
+
+                    <div class="p-8">
+                        <div class="text-xs font-semibold uppercase tracking-wider text-blue-500 mb-2">Fitness &
+                            Wellness</div>
+                        <h4 class="text-2xl font-bold text-white mb-3">Fitness/Gym Website</h4>
+                        <p class="text-zinc-400 text-sm mb-6 leading-relaxed">
+                            A high-energy, clean platform featuring class schedules, membership sign-ups, trainer
+                            directories, and seamless mobile booking.
+                        </p>
+                        <a href="#contact"
+                            class="inline-flex items-center gap-2 text-sm font-medium text-white hover:text-blue-400 transition-colors">
+                            View Project <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div
+                    class="group bg-surface border border-surfaceBorder rounded-2xl overflow-hidden flex flex-col justify-between hover:border-zinc-700 transition-all">
+                    <div
+                        class="relative w-full aspect-[16/10] overflow-hidden bg-zinc-900 border-b border-surfaceBorder">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80"
+                            alt="Corporate Business Website"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
+                        <div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent">
+                        </div>
+                        <div
+                            class="absolute bottom-4 left-4 bg-charcoal/90 border border-surfaceBorder px-3 py-1.5 rounded-lg text-xs font-mono text-zinc-300 backdrop-blur-sm">
+                            Live Sample: Corporate Advisory Firm
+                        </div>
+                    </div>
+
+                    <div class="p-8">
+                        <div class="text-xs font-semibold uppercase tracking-wider text-blue-500 mb-2">Corporate &
+                            Services</div>
+                        <h4 class="text-2xl font-bold text-white mb-3">Business Website</h4>
+                        <p class="text-zinc-400 text-sm mb-6 leading-relaxed">
+                            A sophisticated corporate website engineered to build immediate trust, establish
+                            professional authority, and generate inbound client leads.
+                        </p>
+                        <a href="#contact"
+                            class="inline-flex items-center gap-2 text-sm font-medium text-white hover:text-blue-400 transition-colors">
+                            View Project <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="case-study" class="py-24 px-6 bg-charcoal">
+        <div class="max-w-7xl mx-auto">
+            <div class="bg-surface border border-surfaceBorder rounded-3xl p-8 md:p-14">
+                <div
+                    class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-600/10 border border-blue-500/20 text-xs text-blue-400 font-medium mb-6">
+                    Featured Case Study — Restaurant Website
+                </div>
+
+                <h3 class="text-3xl md:text-5xl font-bold text-white tracking-tight mb-8">
+                    Elevating Local Dining into a Digital Destination
+                </h3>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="text-lg font-semibold text-white mb-2 flex items-center gap-2">
+                                <span class="w-2 h-2 rounded-full bg-blue-500"></span>
+                                The Challenge
+                            </h4>
+                            <p class="text-zinc-400 text-sm leading-relaxed pl-4 border-l border-surfaceBorder">
+                                The restaurant relied entirely on third-party food delivery apps that ate into profit
+                                margins. Their previous website was slow, not mobile-optimized, and lacked any online
+                                table reservation capability.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold text-white mb-2 flex items-center gap-2">
+                                <span class="w-2 h-2 rounded-full bg-blue-500"></span>
+                                The Solution
+                            </h4>
+                            <p class="text-zinc-400 text-sm leading-relaxed pl-4 border-l border-surfaceBorder">
+                                AS Studio engineered a lightning-fast, high-end responsive website focused on immersive
+                                imagery, rapid loading speeds, and frictionless customer interactions directly on mobile
+                                devices.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-charcoal border border-surfaceBorder p-6 rounded-2xl">
+                        <h4 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">Key Features
+                            Integrated</h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-zinc-300">
+                            <li class="flex items-center gap-2"><i data-lucide="check"
+                                    class="w-4 h-4 text-blue-500"></i> Responsive design</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check"
+                                    class="w-4 h-4 text-blue-500"></i> Digital menu</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check"
+                                    class="w-4 h-4 text-blue-500"></i> Photo gallery</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check"
+                                    class="w-4 h-4 text-blue-500"></i> Google Maps integration</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check"
+                                    class="w-4 h-4 text-blue-500"></i> Contact & WhatsApp</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check"
+                                    class="w-4 h-4 text-blue-500"></i> Table reservation</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check"
+                                    class="w-4 h-4 text-blue-500"></i> Mobile optimization</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div
+                    class="pt-8 border-t border-surfaceBorder flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <div class="text-sm text-zinc-400">
+                        <strong class="text-white">Final Design:</strong> Clean dark mode palette with warm accent
+                        lighting highlighting menu items and reservation CTAs.
+                    </div>
+                    <a href="#contact"
+                        class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-lg text-sm font-medium transition-all shrink-0">
+                        Get a Similar Website
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="process" class="py-24 px-6 bg-surface border-t border-b border-surfaceBorder">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-xs uppercase tracking-widest text-blue-500 font-semibold mb-3">Workflow</h2>
+                <h3 class="text-3xl sm:text-4xl font-bold tracking-tight text-white">How We Work</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-charcoal border border-surfaceBorder p-8 rounded-2xl relative">
+                    <div class="text-3xl font-mono font-bold text-blue-500 mb-4">01</div>
+                    <h4 class="text-xl font-semibold text-white mb-2">Discover</h4>
+                    <p class="text-zinc-400 text-sm leading-relaxed">
+                        Understand the business, target audience, and specific growth goals.
+                    </p>
+                </div>
+
+                <div class="bg-charcoal border border-surfaceBorder p-8 rounded-2xl relative">
+                    <div class="text-3xl font-mono font-bold text-blue-500 mb-4">02</div>
+                    <h4 class="text-xl font-semibold text-white mb-2">Design</h4>
+                    <p class="text-zinc-400 text-sm leading-relaxed">
+                        Create the visual direction, structural layout, and seamless user experience.
+                    </p>
+                </div>
+
+                <div class="bg-charcoal border border-surfaceBorder p-8 rounded-2xl relative">
+                    <div class="text-3xl font-mono font-bold text-blue-500 mb-4">03</div>
+                    <h4 class="text-xl font-semibold text-white mb-2">Develop</h4>
+                    <p class="text-zinc-400 text-sm leading-relaxed">
+                        Build and rigorously test the website across all devices and browsers.
+                    </p>
+                </div>
+
+                <div class="bg-charcoal border border-surfaceBorder p-8 rounded-2xl relative">
+                    <div class="text-3xl font-mono font-bold text-blue-500 mb-4">04</div>
+                    <h4 class="text-xl font-semibold text-white mb-2">Launch</h4>
+                    <p class="text-zinc-400 text-sm leading-relaxed">
+                        Deploy the website to production and provide ongoing maintenance and support.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 px-6 bg-charcoal">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-6">
+                <h2 class="text-xs uppercase tracking-widest text-blue-500 font-semibold mb-3">About AS Studio</h2>
+                <h3 class="text-3xl sm:text-5xl font-bold tracking-tight text-white mb-6">
+                    Small Studio. Big Digital Thinking.
+                </h3>
+                <p class="text-zinc-400 text-base sm:text-lg leading-relaxed mb-6">
+                    AS Studio combines intelligent design, clean development, and modern technology to create websites
+                    that help Indian businesses and startups build credibility and connect with customers online.
+                </p>
+                <p class="text-zinc-400 text-sm sm:text-base leading-relaxed">
+                    We believe in transparent communication, high craftsmanship, flexible pricing, and building websites
+                    that perform exceptionally without unnecessary complexity.
+                </p>
+            </div>
+
+            <div class="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div class="bg-surface border border-surfaceBorder p-6 rounded-2xl">
+                    <div
+                        class="w-10 h-10 rounded-lg bg-blue-600/10 border border-blue-500/20 flex items-center justify-center text-blue-400 mb-4">
+                        <i data-lucide="pen-tool" class="w-5 h-5"></i>
+                    </div>
+                    <h4 class="text-base font-semibold text-white mb-1">Custom Design</h4>
+                    <p class="text-xs text-zinc-400">Tailored UI/UX built specifically for your brand identity.</p>
+                </div>
+
+                <div class="bg-surface border border-surfaceBorder p-6 rounded-2xl">
+                    <div
+                        class="w-10 h-10 rounded-lg bg-blue-600/10 border border-blue-500/20 flex items-center justify-center text-blue-400 mb-4">
+                        <i data-lucide="smartphone" class="w-5 h-5"></i>
+                    </div>
+                    <h4 class="text-base font-semibold text-white mb-1">Mobile First</h4>
+                    <p class="text-xs text-zinc-400">Flawless experience across smartphones, tablets, and desktops.</p>
+                </div>
+
+                <div class="bg-surface border border-surfaceBorder p-6 rounded-2xl">
+                    <div
+                        class="w-10 h-10 rounded-lg bg-blue-600/10 border border-blue-500/20 flex items-center justify-center text-blue-400 mb-4">
+                        <i data-lucide="gauge" class="w-5 h-5"></i>
+                    </div>
+                    <h4 class="text-base font-semibold text-white mb-1">Performance Focused</h4>
+                    <p class="text-xs text-zinc-400">Lightning-fast load times optimized for maximum conversions.</p>
+                </div>
+
+                <div class="bg-surface border border-surfaceBorder p-6 rounded-2xl">
+                    <div
+                        class="w-10 h-10 rounded-lg bg-blue-600/10 border border-blue-500/20 flex items-center justify-center text-blue-400 mb-4">
+                        <i data-lucide="headset" class="w-5 h-5"></i>
+                    </div>
+                    <h4 class="text-base font-semibold text-white mb-1">Reliable Support</h4>
+                    <p class="text-xs text-zinc-400">Ongoing maintenance and technical partnership you can count on.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 px-6 bg-surface border-t border-b border-surfaceBorder">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-xs uppercase tracking-widest text-zinc-500 font-semibold mb-8">Powered By Modern
+                Technologies</h2>
+            <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-8 text-zinc-400 text-sm font-mono">
+                <span class="px-4 py-2 bg-charcoal border border-surfaceBorder rounded-lg">HTML5</span>
+                <span class="px-4 py-2 bg-charcoal border border-surfaceBorder rounded-lg">CSS3</span>
+                <span class="px-4 py-2 bg-charcoal border border-surfaceBorder rounded-lg">JavaScript</span>
+                <span class="px-4 py-2 bg-charcoal border border-surfaceBorder rounded-lg">React</span>
+                <span class="px-4 py-2 bg-charcoal border border-surfaceBorder rounded-lg">Node.js</span>
+                <span class="px-4 py-2 bg-charcoal border border-surfaceBorder rounded-lg">MongoDB</span>
+                <span class="px-4 py-2 bg-charcoal border border-surfaceBorder rounded-lg">AWS</span>
+                <span class="px-4 py-2 bg-charcoal border border-surfaceBorder rounded-lg">Docker</span>
+                <span class="px-4 py-2 bg-charcoal border border-surfaceBorder rounded-lg">GitHub</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-6 bg-charcoal text-center relative overflow-hidden">
+        <div class="max-w-4xl mx-auto relative z-10">
+            <h2 class="text-3xl sm:text-5xl font-bold tracking-tight text-white mb-4">
+                Have a project in mind? Let's discuss pricing!
+            </h2>
+            <p class="text-lg text-zinc-400 mb-8 max-w-xl mx-auto">
+                Flexible and negotiable pricing in Indian Rupees (₹) tailored to your exact business needs.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#contact"
+                    class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-medium transition-all shadow-xl shadow-blue-600/20 text-base">
+                    Start Your Project
+                    <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </a>
+                <a href="https://wa.me/917011885686" target="_blank" rel="noopener noreferrer"
+                    class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-xl font-medium transition-all shadow-xl shadow-emerald-600/20 text-base">
+                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                        <path
+                            d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+                    </svg> Chat on WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 px-6 bg-surface border-t border-surfaceBorder">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12">
+
+            <div class="lg:col-span-5 flex flex-col justify-between">
+                <div>
+                    <h2 class="text-xs uppercase tracking-widest text-blue-500 font-semibold mb-3">Get in Touch</h2>
+                    <h3 class="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-6">
+                        Let’s Discuss Your Next Project & Budget
+                    </h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed mb-8">
+                        Fill out the form or reach out directly via WhatsApp or phone. We offer flexible, negotiable INR
+                        pricing based on your custom requirements.
+                    </p>
+                </div>
+
+                <div class="space-y-4">
+                    <a href="mailto:hello@asstudio.in"
+                        class="flex items-center gap-3 text-sm text-zinc-300 hover:text-white transition-colors">
+                        <div
+                            class="w-10 h-10 rounded-lg bg-charcoal border border-surfaceBorder flex items-center justify-center text-blue-400 shrink-0">
+                            <i data-lucide="mail" class="w-5 h-5"></i>
+                        </div>
+                        <span>hello@asstudio.in</span>
+                    </a>
+
+                    <a href="https://wa.me/917011885686" target="_blank" rel="noopener noreferrer"
+                        class="flex items-center gap-3 text-sm text-zinc-300 hover:text-white transition-colors">
+                        <div
+                            class="w-10 h-10 rounded-lg bg-charcoal border border-surfaceBorder flex items-center justify-center text-emerald-400 shrink-0">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                                <path
+                                    d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+                            </svg>
+                        </div>
+                        <span>+91 70118 85686 (WhatsApp Support)</span>
+                    </a>
+
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+                        class="flex items-center gap-3 text-sm text-zinc-300 hover:text-white transition-colors">
+                        <div
+                            class="w-10 h-10 rounded-lg bg-charcoal border border-surfaceBorder flex items-center justify-center text-pink-400 shrink-0">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
+                        </div>
+                        <span>Instagram (@asstudio.in)</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="lg:col-span-7 bg-charcoal border border-surfaceBorder p-8 rounded-3xl">
+                <form id="project-form" class="space-y-6" onsubmit="handleFormSubmit(event)">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name"
+                                class="block text-xs font-medium text-zinc-300 uppercase tracking-wider mb-2">Your Name
+                                *</label>
+                            <input type="text" id="name" required
+                                class="w-full bg-surface border border-surfaceBorder rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500 transition-colors"
+                                placeholder="Rahul Sharma">
+                        </div>
+                        <div>
+                            <label for="business"
+                                class="block text-xs font-medium text-zinc-300 uppercase tracking-wider mb-2">Business
+                                Name *</label>
+                            <input type="text" id="business" required
+                                class="w-full bg-surface border border-surfaceBorder rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500 transition-colors"
+                                placeholder="Sharma Enterprises / Cafe">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label for="email"
+                                class="block text-xs font-medium text-zinc-300 uppercase tracking-wider mb-2">Email
+                                Address *</label>
+                            <input type="email" id="email" required
+                                class="w-full bg-surface border border-surfaceBorder rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500 transition-colors"
+                                placeholder="rahul@example.com">
+                        </div>
+                        <div>
+                            <label for="phone"
+                                class="block text-xs font-medium text-zinc-300 uppercase tracking-wider mb-2">Phone /
+                                WhatsApp Number *</label>
+                            <input type="tel" id="phone" required
+                                class="w-full bg-surface border border-surfaceBorder rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500 transition-colors"
+                                placeholder="+91 70118 85686">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label for="project-type"
+                                class="block text-xs font-medium text-zinc-300 uppercase tracking-wider mb-2">Website
+                                Type Needed *</label>
+                            <select id="project-type" required
+                                class="w-full bg-surface border border-surfaceBorder rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500 transition-colors">
+                                <option value="" disabled selected>Select website type</option>
+                                <option value="Single Page / Landing Page">Single Page / Landing Page (₹14,999)</option>
+                                <option value="Restaurant / Cafe Website">Restaurant / Cafe Website</option>
+                                <option value="Gym / Fitness Website">Gym / Fitness Website</option>
+                                <option value="Car Modification / Local Business">Car Modification / Local Business
+                                </option>
+                                <option value="E-commerce Store">E-commerce Store (₹44,999+)</option>
+                                <option value="Custom Business Website">Custom Business Website (₹24,999+)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="budget"
+                                class="block text-xs font-medium text-zinc-300 uppercase tracking-wider mb-2">Expected
+                                Budget in INR *</label>
+                            <select id="budget" required
+                                class="w-full bg-surface border border-surfaceBorder rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500 transition-colors">
+                                <option value="" disabled selected>Select budget range (Negotiable)</option>
+                                <option value="₹12,000 - ₹20,000">₹12,000 - ₹20,000</option>
+                                <option value="₹20,000 - ₹35,000">₹20,000 - ₹35,000</option>
+                                <option value="₹35,000 - ₹50,000+">₹35,000 - ₹50,000+</option>
+                                <option value="Custom / Negotiable">Custom / Negotiable</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="details"
+                            class="block text-xs font-medium text-zinc-300 uppercase tracking-wider mb-2">Project
+                            Details & Requirements *</label>
+                        <textarea id="details" rows="4" required
+                            class="w-full bg-surface border border-surfaceBorder rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500 transition-colors resize-none"
+                            placeholder="Tell us about your business, what pages or features you need, and any specific requirements..."></textarea>
+                    </div>
+
+                    <button type="submit" id="submit-btn"
+                        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3.5 rounded-xl transition-all shadow-lg shadow-blue-600/20 text-sm">
+                        Send Project Inquiry (INR Pricing)
+                    </button>
+
+                    <div id="form-success" class="hidden text-center text-green-400 text-sm mt-4 font-medium">
+                        Thank you! Your inquiry has been received. We will contact you via phone/WhatsApp within 24
+                        hours.
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-charcoal border-t border-white/10 py-16 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+            <div class="flex flex-col items-center md:items-start">
+                <a href="#" class="text-xl font-bold tracking-tight text-white flex items-center gap-2 mb-2">
+                    <span class="w-3 h-3 bg-blue-600 rounded-sm"></span>
+                    AS Studio
+                </a>
+                <p class="text-xs text-zinc-500 uppercase tracking-widest font-mono">Design. Develop. Deploy. • Proudly
+                    Serving Indian Businesses</p>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-8 text-sm font-medium text-zinc-400">
+                <a href="#home" class="hover:text-white transition-colors">Home</a>
+                <a href="#services" class="hover:text-white transition-colors">Services</a>
+                <a href="#pricing" class="hover:text-white transition-colors">Pricing</a>
+                <a href="#work" class="hover:text-white transition-colors">Work</a>
+                <a href="#about" class="hover:text-white transition-colors">About</a>
+                <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+            </div>
+
+            <div class="text-xs text-zinc-600">
+                © 2026 AS Studio. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const submitBtn = document.getElementById('submit-btn');
+            const successMsg = document.getElementById('form-success');
+
+            submitBtn.disabled = true;
+            submitBtn.innerText = "Sending Inquiry...";
+
+            setTimeout(() => {
+                submitBtn.style.display = 'none';
+                successMsg.classList.remove('hidden');
+                document.getElementById('project-form').reset();
+            }, 1000);
+        }
+    </script>
+</body>
+
+</html>
