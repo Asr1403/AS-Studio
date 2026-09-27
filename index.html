@@ -845,96 +845,165 @@
             </div>
 
             <div class="lg:col-span-7 bg-charcoal border border-surfaceBorder p-8 rounded-3xl">
-                <form id="project-form" class="space-y-6" onsubmit="handleFormSubmit(event)">
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        <div>
-                            <label for="name"
-                                class="block text-xs font-medium text-zinc-300 uppercase tracking-wider mb-2">Your Name
-                                *</label>
-                            <input type="text" id="name" required
-                                class="w-full bg-surface border border-surfaceBorder rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500 transition-colors"
-                                placeholder="Rahul Sharma">
-                        </div>
-                        <div>
-                            <label for="business"
-                                class="block text-xs font-medium text-zinc-300 uppercase tracking-wider mb-2">Business
-                                Name *</label>
-                            <input type="text" id="business" required
-                                class="w-full bg-surface border border-surfaceBorder rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500 transition-colors"
-                                placeholder="Sharma Enterprises / Cafe">
-                        </div>
-                    </div>
+<form id="project-form" onsubmit="handleFormSubmit(event)" class="space-y-6">
 
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        <div>
-                            <label for="email"
-                                class="block text-xs font-medium text-zinc-300 uppercase tracking-wider mb-2">Email
-                                Address *</label>
-                            <input type="email" id="email" required
-                                class="w-full bg-surface border border-surfaceBorder rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500 transition-colors"
-                                placeholder="rahul@example.com">
-                        </div>
-                        <div>
-                            <label for="phone"
-                                class="block text-xs font-medium text-zinc-300 uppercase tracking-wider mb-2">Phone /
-                                WhatsApp Number *</label>
-                            <input type="tel" id="phone" required
-                                class="w-full bg-surface border border-surfaceBorder rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500 transition-colors"
-                                placeholder="+91 70118 85686">
-                        </div>
-                    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
 
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        <div>
-                            <label for="project-type"
-                                class="block text-xs font-medium text-zinc-300 uppercase tracking-wider mb-2">Website
-                                Type Needed *</label>
-                            <select id="project-type" required
-                                class="w-full bg-surface border border-surfaceBorder rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500 transition-colors">
-                                <option value="" disabled selected>Select website type</option>
-                                <option value="Single Page / Landing Page">Single Page / Landing Page (₹14,999)</option>
-                                <option value="Restaurant / Cafe Website">Restaurant / Cafe Website</option>
-                                <option value="Gym / Fitness Website">Gym / Fitness Website</option>
-                                <option value="Car Modification / Local Business">Car Modification / Local Business
-                                </option>
-                                <option value="E-commerce Store">E-commerce Store (₹44,999+)</option>
-                                <option value="Custom Business Website">Custom Business Website (₹24,999+)</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label for="budget"
-                                class="block text-xs font-medium text-zinc-300 uppercase tracking-wider mb-2">Expected
-                                Budget in INR *</label>
-                            <select id="budget" required
-                                class="w-full bg-surface border border-surfaceBorder rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500 transition-colors">
-                                <option value="" disabled selected>Select budget range (Negotiable)</option>
-                                <option value="₹12,000 - ₹20,000">₹12,000 - ₹20,000</option>
-                                <option value="₹20,000 - ₹35,000">₹20,000 - ₹35,000</option>
-                                <option value="₹35,000 - ₹50,000+">₹35,000 - ₹50,000+</option>
-                                <option value="Custom / Negotiable">Custom / Negotiable</option>
-                            </select>
-                        </div>
-                    </div>
+        <div>
+            <label for="name" class="block text-xs font-medium text-zinc-300 uppercase tracking-wider mb-2">
+                Your Name *
+            </label>
 
-                    <div>
-                        <label for="details"
-                            class="block text-xs font-medium text-zinc-300 uppercase tracking-wider mb-2">Project
-                            Details & Requirements *</label>
-                        <textarea id="details" rows="4" required
-                            class="w-full bg-surface border border-surfaceBorder rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500 transition-colors resize-none"
-                            placeholder="Tell us about your business, what pages or features you need, and any specific requirements..."></textarea>
-                    </div>
+            <input type="text" id="name" required
+                class="w-full bg-surface border border-surfaceBorder rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500 transition-colors"
+                placeholder="Rahul Sharma">
+        </div>
 
-                    <button type="submit" id="submit-btn"
-                        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3.5 rounded-xl transition-all shadow-lg shadow-blue-600/20 text-sm">
-                        Send Project Inquiry (INR Pricing)
-                    </button>
 
-                    <div id="form-success" class="hidden text-center text-green-400 text-sm mt-4 font-medium">
-                        Thank you! Your inquiry has been received. We will contact you via phone/WhatsApp within 24
-                        hours.
-                    </div>
-                </form>
+        <div>
+            <label for="business" class="block text-xs font-medium text-zinc-300 uppercase tracking-wider mb-2">
+                Business Name *
+            </label>
+
+            <input type="text" id="business" required
+                class="w-full bg-surface border border-surfaceBorder rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500 transition-colors"
+                placeholder="Sharma Enterprises / Cafe">
+        </div>
+
+    </div>
+
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+
+        <div>
+            <label for="email" class="block text-xs font-medium text-zinc-300 uppercase tracking-wider mb-2">
+                Email Address *
+            </label>
+
+            <input type="email" id="email" required
+                class="w-full bg-surface border border-surfaceBorder rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500 transition-colors"
+                placeholder="rahul@example.com">
+        </div>
+
+
+        <div>
+            <label for="phone" class="block text-xs font-medium text-zinc-300 uppercase tracking-wider mb-2">
+                Phone / WhatsApp Number *
+            </label>
+
+            <input type="tel" id="phone" required
+                class="w-full bg-surface border border-surfaceBorder rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500 transition-colors"
+                placeholder="+91 70118 85686">
+        </div>
+
+    </div>
+
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+
+        <div>
+            <label for="project-type" class="block text-xs font-medium text-zinc-300 uppercase tracking-wider mb-2">
+                Website Type Needed *
+            </label>
+
+            <select id="project-type" required
+                class="w-full bg-surface border border-surfaceBorder rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500 transition-colors">
+
+                <option value="" disabled selected>
+                    Select website type
+                </option>
+
+                <option value="Single Page / Landing Page">
+                    Single Page / Landing Page (₹14,999)
+                </option>
+
+                <option value="Restaurant / Cafe Website">
+                    Restaurant / Cafe Website
+                </option>
+
+                <option value="Gym / Fitness Website">
+                    Gym / Fitness Website
+                </option>
+
+                <option value="Car Modification / Local Business">
+                    Car Modification / Local Business
+                </option>
+
+                <option value="E-commerce Store">
+                    E-commerce Store (₹44,999+)
+                </option>
+
+                <option value="Custom Business Website">
+                    Custom Business Website (₹24,999+)
+                </option>
+
+            </select>
+        </div>
+
+
+        <div>
+            <label for="budget" class="block text-xs font-medium text-zinc-300 uppercase tracking-wider mb-2">
+                Expected Budget in INR *
+            </label>
+
+            <select id="budget" required
+                class="w-full bg-surface border border-surfaceBorder rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500 transition-colors">
+
+                <option value="" disabled selected>
+                    Select budget range (Negotiable)
+                </option>
+
+                <option value="₹12,000 - ₹20,000">
+                    ₹12,000 - ₹20,000
+                </option>
+
+                <option value="₹20,000 - ₹35,000">
+                    ₹20,000 - ₹35,000
+                </option>
+
+                <option value="₹35,000 - ₹50,000+">
+                    ₹35,000 - ₹50,000+
+                </option>
+
+                <option value="Custom / Negotiable">
+                    Custom / Negotiable
+                </option>
+
+            </select>
+        </div>
+
+    </div>
+
+
+    <div>
+
+        <label for="details" class="block text-xs font-medium text-zinc-300 uppercase tracking-wider mb-2">
+            Project Details & Requirements *
+        </label>
+
+        <textarea id="details" rows="4" required
+            class="w-full bg-surface border border-surfaceBorder rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500 transition-colors resize-none"
+            placeholder="Tell us about your business, what pages or features you need, and any specific requirements..."></textarea>
+
+    </div>
+
+
+    <button type="submit" id="submit-btn"
+        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3.5 rounded-xl transition-all shadow-lg shadow-blue-600/20 text-sm">
+
+        Send Project Inquiry (INR Pricing)
+
+    </button>
+
+
+    <div id="form-success" class="hidden text-center text-green-400 text-sm mt-4 font-medium">
+
+        Thank you! Your inquiry has been received.
+        We will contact you via phone/WhatsApp within 24 hours.
+
+    </div>
+
+</form>
             </div>
 
         </div>
@@ -983,19 +1052,81 @@
             });
         });
 
-        function handleFormSubmit(event) {
+    async function handleFormSubmit(event) {
             event.preventDefault();
-            const submitBtn = document.getElementById('submit-btn');
-            const successMsg = document.getElementById('form-success');
+
+            console.log("FORM SUBMITTED");
+
+            const form = document.getElementById("project-form");
+            const submitBtn = document.getElementById("submit-btn");
+            const successMsg = document.getElementById("form-success");
+
+            const inquiryData = {
+                name: document.getElementById("name").value.trim(),
+                business: document.getElementById("business").value.trim(),
+                email: document.getElementById("email").value.trim(),
+                phone: document.getElementById("phone").value.trim(),
+                service: document.getElementById("project-type").value,
+                budget: document.getElementById("budget").value,
+                message: document.getElementById("details").value.trim()
+            };
+
+            console.log("INQUIRY DATA:", inquiryData);
 
             submitBtn.disabled = true;
+            submitBtn.style.display = "";
             submitBtn.innerText = "Sending Inquiry...";
 
-            setTimeout(() => {
-                submitBtn.style.display = 'none';
-                successMsg.classList.remove('hidden');
-                document.getElementById('project-form').reset();
-            }, 1000);
+            try {
+                console.log("CONNECTING TO BACKEND...");
+
+                const response = await fetch("http://localhost:5000/api/inquiries", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(inquiryData)
+                });
+
+                console.log("BACKEND STATUS:", response.status);
+
+                const result = await response.json();
+
+                console.log("BACKEND RESULT:", result);
+
+                if (!response.ok || !result.success) {
+                    throw new Error(result.message || "Failed to save inquiry");
+                }
+
+                form.reset();
+
+                successMsg.textContent =
+                    "Thank you! Your inquiry has been saved successfully. We will contact you via phone/WhatsApp within 24 hours.";
+
+                successMsg.classList.remove("hidden");
+                successMsg.classList.remove("text-red-400");
+                successMsg.classList.add("text-green-400");
+
+                submitBtn.disabled = false;
+                submitBtn.style.display = "";
+                submitBtn.innerText = "Inquiry Sent ✓";
+
+                console.log("INQUIRY SAVED SUCCESSFULLY");
+
+            } catch (error) {
+                console.error("SUBMISSION ERROR:", error);
+
+                successMsg.textContent =
+                    "Unable to send your inquiry. Please make sure the AS Studio backend is running.";
+
+                successMsg.classList.remove("hidden");
+                successMsg.classList.remove("text-green-400");
+                successMsg.classList.add("text-red-400");
+
+                submitBtn.disabled = false;
+                submitBtn.style.display = "";
+                submitBtn.innerText = "Send Project Inquiry (INR Pricing)";
+            }
         }
     </script>
 </body>
